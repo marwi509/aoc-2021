@@ -1,4 +1,4 @@
-package aoc.util;
+package util;
 
 import java.io.*;
 import java.util.ArrayList;
