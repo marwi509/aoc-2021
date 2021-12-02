@@ -9,6 +9,7 @@ fun main() {
 
     var horiz = 0
     var depth = 0
+    var aim = 0
 
     for (i in 0 until lines.size) {
         val line = lines[i]
@@ -16,12 +17,13 @@ fun main() {
         val instruction = groups[1]
         val number = groups[2].toInt()
 
-        if(instruction == "forward") {
+        if (instruction == "forward") {
             horiz += number
+            depth += aim * number
         } else if (instruction == "down") {
-            depth += number
+            aim += number
         } else if (instruction == "up") {
-            depth -= number
+            aim -= number
         }
     }
 
