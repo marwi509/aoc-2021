@@ -28,5 +28,5 @@ private fun makeFish(days: Int) {
         fishHistogram = nextHistogram
         nextHistogram = Array(9) { i -> BigInteger.ZERO }
     }
-    println(fishHistogram.sumOf { it })
+    println(fishHistogram.reduce { i, j -> i.add(j) })
 }
