@@ -25,5 +25,5 @@ private fun fuelExpenditureFirst(crabs: List<Int>, alignCoordinate: Int): Int {
 }
 
 private fun fuelExpenditureSecond(crabs: List<Int>, alignCoordinate: Int): Int {
-    return crabs.map { abs(it - alignCoordinate) }.map { IntRange(1, it).sum() }.sum()
+    return crabs.map { abs(it - alignCoordinate) }.map { (it * (it + 1) / 2) }.sum()
 }
