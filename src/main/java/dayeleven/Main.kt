@@ -12,7 +12,7 @@ fun main() {
     second(grid)
 }
 
-fun first(grid: Grid) {
+fun second(grid: Grid) {
     var counter = 0
     while(true) {
         counter++
@@ -25,14 +25,10 @@ fun first(grid: Grid) {
     }
 }
 
-fun second(grid: Grid) {
+fun first(grid: Grid) {
     IntRange(1, 100).forEach {
         grid.incrementAll()
         grid.resetFlashes()
-        if (grid.allFlash()) {
-            println(it)
-            return
-        }
     }
 
     println(grid.flashes)
