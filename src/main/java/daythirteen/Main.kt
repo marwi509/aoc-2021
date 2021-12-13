@@ -36,19 +36,19 @@ fun main() {
         val line = it.nbr
         val dimension = it.foldAlong
         if (dimension == Dimension.y) {
-            for (i in grid.indices) {
-                for (j in line+1 until sizeY) {
+            for (i in 0 until sizeX) {
+                for (j in line + 1 until sizeY) {
                     if (grid[i][j] == '#')
-                    grid[i][sizeY - 1 - j] = '#'
+                        grid[i][2 * line - j] = '#'
                 }
             }
             sizeY = line
 
         } else {
-            for (i in line +1 until sizeX) {
+            for (i in line + 1 until sizeX) {
                 for (j in 0 until sizeY) {
                     if (grid[i][j] == '#')
-                        grid[sizeX - 1 - i][j] = '#'
+                        grid[2 * line - i][j] = '#'
                 }
             }
             sizeX = line
@@ -58,7 +58,7 @@ fun main() {
         for (i in 0 until sizeX) {
             for (j in 0 until sizeY) {
                 if (grid[i][j] == '#') {
-                    count ++
+                    count++
                 }
             }
         }
