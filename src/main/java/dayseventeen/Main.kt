@@ -1,8 +1,14 @@
 package dayseventeen
 
+import org.apache.commons.lang3.time.StopWatch
+
 fun main() {
+    val sw = StopWatch()
+    sw.start()
     part1()
     part2()
+    sw.stop()
+    println("""Time: ${sw.time}ms""")
 }
 
 private fun part2() {
