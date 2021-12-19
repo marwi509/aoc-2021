@@ -1,0 +1,4 @@
+package dayfifteen
+
+class Dijkstra {
+}
